@@ -16,7 +16,7 @@ To get a local copy up and running follow this simple steps:
 
 ## Table preview
 
-<img src="./src/assets/images/Screenshot 2022-06-14 at 4.57.19 PM.png">
+<img src="Screenshot 2022-06-14 at 4.57.19 PM.png">
 
 
 ## Author
