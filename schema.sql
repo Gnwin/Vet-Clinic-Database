@@ -18,3 +18,5 @@ weight_kg decimal(4,2)
 );
 
 -- query and update animals table -------------------------------------
+
+ALTER TABLE animals ADD COLUMN species varchar(50);
