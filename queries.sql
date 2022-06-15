@@ -1,5 +1,7 @@
 /*Queries that provide answers to the questions from all projects.*/
 
+-- create animals table----------------------------------------------
+
 SELECT * FROM animals WHERE name LIKE '%mon';
 
 SELECT name FROM animals WHERE date_of_birth BETWEEN '2016-01-01' AND '2019-12-30';
@@ -20,3 +22,6 @@ SELECT * FROM animals WHERE name <> 'Gabumon';
 SELECT * FROM animals WHERE name NOT LIKE 'Gabumon';
 
 SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
+
+-- query and update animals table -------------------------------------
+

@@ -1,8 +1,12 @@
 /* Database schema to keep the structure of entire database. */
 
-createdb vet_clinic
+-- create animals table----------------------------------------------
 
-psql vet_clinic
+createdb vet_clinic -- client applications(run directly from command prompt without psql console)
+
+psql postgres
+
+\c vet_clinic
 
 CREATE TABLE animals (
 id serial,
@@ -12,3 +16,5 @@ escape_attempts integer,
 neutered boolean DEFAULT FALSE,
 weight_kg decimal(4,2)
 );
+
+-- query and update animals table -------------------------------------
