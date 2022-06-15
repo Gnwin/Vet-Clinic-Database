@@ -45,6 +45,8 @@ BEGIN; -- starts transaction
 
 DELETE FROM animals;
 
+SELECT count(id) FROM animals;
+
 ROLLBACK;
 
 BEGIN;
