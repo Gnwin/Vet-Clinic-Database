@@ -39,15 +39,15 @@ UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
 
 UPDATE animals SET species = 'pokemon' WHERE species = '';
 
-COMMIT; -- ends transaction
+COMMIT; -- ends transaction(permanent change to table)
 
 BEGIN; -- starts transaction
 
 DELETE FROM animals;
 
-SELECT count(id) FROM animals;
+ROLLBACK; -- ends transaction
 
-ROLLBACK;
+SELECT count(id) FROM animals;
 
 BEGIN;
 
@@ -57,7 +57,7 @@ SAVEPOINT SP1;
 
 UPDATE animals SET weight_kg = weight_kg * -1;
 
-ROLLBACK TO SP1;
+ROLLBACK TO SP1; -- does not end transaction
 
 UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 
