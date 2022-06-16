@@ -47,7 +47,7 @@ DELETE FROM animals;
 
 ROLLBACK; -- ends transaction
 
-SELECT count(id) FROM animals;
+SELECT * FROM animals; -- verification
 
 BEGIN;
 
