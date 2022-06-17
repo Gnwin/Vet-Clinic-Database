@@ -55,3 +55,24 @@ ADD owner_id INT,
 ADD CONSTRAINT fk_owner -- optional---
 FOREIGN KEY(owner_id) REFERENCES owners(id);
 
+-- add "join table" for visits -------------------------------------
+
+CREATE TABLE vets(
+id SERIAL PRIMARY KEY,
+name varchar(50),
+age int,
+date_of_graduation date
+);
+
+CREATE TABLE specializations (
+  id SERIAL PRIMARY KEY,
+  vet_id integer REFERENCES vets(id),
+  species_id integer REFERENCES species(id)
+);
+
+CREATE TABLE visits (
+  id SERIAL PRIMARY KEY,
+  animal_id integer REFERENCES animals(id),
+  vet_id integer REFERENCES vets(id),
+  visit_date date
+);
