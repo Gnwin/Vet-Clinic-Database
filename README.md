@@ -18,15 +18,16 @@ To get a local copy up and running follow this simple steps:
 
 <img src="Screenshot 2022-06-14 at 4.57.19 PM.png">
 <img src="Screenshot 2022-06-15 at 5.47.12 PM.png">
+<img src="Screenshot 2022-06-17 at 7.08.40 PM.png">
 
 
 ## Author
 
 👤 **Godwin Nwachukwu**
 
-- GitHub: [@githubhandle](https://github.com/gnwin)
-- Twitter: [@twitterhandle](https://twitter.com/gmarxr)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/n-gwin/)
+- GitHub: [@gnwin](https://github.com/gnwin)
+- Twitter: [@gmarxr](https://twitter.com/gmarxr)
+- LinkedIn: [n-gwin](https://www.linkedin.com/in/n-gwin/)
 
 
 ## 🤝 Contributing
