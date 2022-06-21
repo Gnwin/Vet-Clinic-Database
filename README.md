@@ -9,7 +9,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 To get a local copy up and running follow this simple steps:
 
 - Clone repository to your local machine: `https://github.com/Gnwin/Vet-Clinic-Database.git`
-- Run `git checkout feature/performance-audit`
+- Run `git checkout feature/schema-diagram`
 - Use [schema.sql](./schema.sql) to create all tables.
 - Use [data.sql](./data.sql) to populate tables with sample data.
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
