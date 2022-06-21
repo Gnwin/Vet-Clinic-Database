@@ -14,6 +14,9 @@ To get a local copy up and running follow this simple steps:
 - Use [data.sql](./data.sql) to populate tables with sample data.
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
+## Diagram
+![image](/schema-diagram.png)
+
 ## Table preview
 
 <img src="Screenshot 2022-06-14 at 4.57.19 PM.png">
