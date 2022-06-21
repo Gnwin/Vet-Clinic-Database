@@ -168,3 +168,7 @@ JOIN animals ON visits.animal_id = animals.id
 JOIN species ON animals.species_id = species.id
 WHERE vets.name = 'Maisy Smith'
 GROUP BY species.name;
+
+-- database performance audit -------------------------------------
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;

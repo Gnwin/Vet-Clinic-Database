@@ -58,10 +58,10 @@ COMMIT;
 -- add "join table" for visits -------------------------------------
 
 INSERT INTO vets(name, age, date_of_graduation)
-VALUES('William Tatcher', 45, 'Apr 23, 2000'),
-('Maisy Smith', 26, 'Jan 17, 2019'),
-('Stephanie Mendez', 64, 'May 4, 1981'),
-('Jack Harkness', 38, 'Jun 8, 2008');
+VALUES('William Tatcher', 45, '2000-04-23'),
+('Maisy Smith', 26, '2019-01-17'),
+('Stephanie Mendez', 64, '1981-05-04'),
+('Jack Harkness', 38, '2008-06-08');
 
 INSERT INTO specializations(vet_id, species_id)
 VALUES(1, 1),
@@ -70,23 +70,30 @@ VALUES(1, 1),
 (4, 2);
 
 INSERT INTO visits(animal_id, vet_id, visit_date)
-VALUES(1, 1, 'May 24, 2020');
-(1, 3, 'Jul 22, 2020'),
-(2, 4, 'Feb 2, 2021'),
-(5, 2, 'Jan 5, 2020'),
-(5, 2, 'Mar 8, 2020'),
-(5, 2, 'May 14, 2020'),
-(3, 3, 'May 4, 2021'),
-(9, 4, 'Feb 24, 2021'),
-(7, 2, 'Dec 21, 2019'),
-(7, 1, 'Aug 10, 2020'),
-(7, 2, 'Apr 7, 2021'),
-(10, 3, 'Sept 29, 2019'),
-(8, 4, 'Oct 3, 2020'),
-(8, 4, 'Nov 4, 2020'),
-(4, 2, 'Jan 24, 2019'),
-(4, 2, 'May 15, 2019'),
-(4, 2, 'Feb 27,2020'),
-(4, 2, 'Aug 3,2020'),
-(6, 3, 'May 24,2020'),
-(6, 1, 'Jan 11,2021');
+VALUES(1, 1, '2020-05-24'),
+(1, 3, '2020-07-22'),
+(2, 4, '2021-02-02'),
+(5, 2, '2020-01-05'),
+(5, 2, '2020-03-08'),
+(5, 2, '2020-05-14'),
+(3, 3, '2021-05-04'),
+(9, 4, '2021-02-24'),
+(7, 2, '2019-12-21'),
+(7, 1, '2020-08-10'),
+(7, 2, '2021-04-07'),
+(10, 3, '2019-09-29'),
+(8, 4, '2020-10-03'),
+(8, 4, '2020-05-04'),
+(4, 2, '2019-01-24'),
+(4, 2, '2019-05-15'),
+(4, 2, '2020-02-27'),
+(4, 2, '2020-08-03'),
+(6, 3, '2020-05-24'),
+(6, 1, '2021-01-11');
+
+-- database performance audit -------------------------------------
+
+INSERT INTO visits (animal_id, vet_id, visit_date) 
+SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
